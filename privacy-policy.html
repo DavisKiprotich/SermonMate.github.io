@@ -1,148 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - SermonMate</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background: #fafafa;
-        }
-
-        h1 {
-            color: #1a1a2e;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            color: #1a1a2e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .last-updated {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-
-        .contact {
-            background: #f0f0f0;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 32px 20px 48px; background: #fafafa; }
+        h1, h2 { color: #1a1a2e; } h1 { margin-bottom: 8px; } h2 { margin-top: 30px; margin-bottom: 12px; }
+        h3 { margin: 20px 0 8px; } p { margin: 0 0 15px; } ul { margin: 0 0 15px 20px; } li { margin-bottom: 8px; }
+        a { color: #a51f38; } .last-updated { color: #666; font-size: 14px; margin-bottom: 28px; }
+        .contact { padding: 18px; border-radius: 8px; margin-top: 24px; background: #f0f0f0; }
+        nav { margin-bottom: 24px; font-size: 14px; } nav a { text-decoration: none; margin-right: 16px; }
     </style>
 </head>
-
 <body>
+    <nav><a href="index.html">SermonMate Legal</a><a href="terms-of-service.html">Terms</a><a href="data-deletion.html">Data Deletion</a><a href="support.html">Support</a></nav>
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last Updated: July 13, 2026</p>
+    <p class="last-updated">Last updated: October 15, 2026</p>
 
-    <p>SermonMate ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we
-        collect, use, process, and safeguard information when you use our mobile application.</p>
+    <p>SermonMate (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is a Bible-study mobile application. This Privacy Policy explains how information is handled when you use SermonMate.</p>
 
-    <h2>Information We Collect</h2>
-
-    <h3>Information Stored Locally on Your Device</h3>
+    <h2>Information stored on your device</h2>
+    <p>SermonMate does not require you to create a SermonMate account. The app stores the following on your device to provide its features:</p>
     <ul>
-        <li><strong>App Preferences:</strong> Language, theme (dark/light mode), and settings</li>
-        <li><strong>Bookmarks:</strong> Saved Bible verses and stories</li>
-        <li><strong>Chat Display History:</strong> Recent AI chat conversation display data stored locally on your device for the in-app experience</li>
-        <li><strong>Reading Progress:</strong> Stories you've read</li>
-    </ul>
-    <p><em>Preferences, bookmarks, reading progress, and locally stored chat display data are stored on your device. Messages you send to the AI chat feature are transmitted as needed to generate AI responses.</em></p>
-
-    <h3>Information Processed Automatically</h3>
-    <ul>
-        <li><strong>Device Information:</strong> Device type, operating system version (for app compatibility)</li>
-        <li><strong>Subscription Status:</strong> Processed through Apple App Store or Google Play Store and verified through RevenueCat</li>
-        <li><strong>RevenueCat App User ID:</strong> A subscription identifier used to verify premium access; this is not a SermonMate login account</li>
-        <li><strong>AI Chat Prompts:</strong> Messages you send to the AI chat feature are sent through our Supabase Edge Function to AI providers so the app can generate a response</li>
+        <li>app preferences, including language, theme, and settings;</li>
+        <li>bookmarks and reading progress;</li>
+        <li>downloaded Bible content, story content, images, and audio for offline use;</li>
+        <li>recent AI-chat display history; and</li>
+        <li>an anonymous RevenueCat app-user identifier and, where applicable, a time-limited reviewer-access token used to verify access.</li>
     </ul>
 
-    <h2>How We Use Your Information</h2>
+    <h2>Information sent when you use online features</h2>
+    <h3>Stories, media, and Bible downloads</h3>
+    <p>Stories, images, audio, and Bible-download files are delivered from Cloudflare R2 and Cloudflare's content-delivery network. When your device requests this content, Cloudflare may process standard technical request information, such as IP address, device/browser information, and request logs, under its own privacy practices.</p>
+
+    <h3>AI chat</h3>
+    <p>When you use AI chat, the message you submit, the recent conversation context needed to respond, your selected language, platform, and anonymous subscription identifier are sent to our Cloudflare Worker. The Worker verifies premium access through RevenueCat and sends the request to an AI provider, currently OpenAI or Google AI (Gemini), to generate a response. A legacy Supabase route may be used only if the Cloudflare AI-chat route is unavailable in an older app configuration.</p>
+    <p>We do not intentionally use AI-chat prompts to build a personal profile or store them as a SermonMate account record. Our infrastructure and AI providers may process limited technical and security logs in accordance with their own policies. Do not submit sensitive personal, medical, financial, legal, confidential, or crisis information in AI chat.</p>
+
+    <h3>Subscriptions</h3>
+    <p>Subscriptions are purchased through Google Play or the Apple App Store. We do not receive or store your payment-card details. RevenueCat processes an anonymous app-user identifier and subscription-entitlement information so the app can verify premium access.</p>
+
+    <h2>How we use information</h2>
     <ul>
-        <li>Provide Bible study features and personalized content</li>
-        <li>Power AI-driven chat responses for spiritual guidance</li>
-        <li>Process and verify subscriptions through Apple App Store, Google Play Store, and RevenueCat</li>
-        <li>Improve app performance and user experience</li>
+        <li>to provide and remember app features on your device;</li>
+        <li>to deliver cloud-hosted stories, audio, images, and Bible downloads;</li>
+        <li>to provide AI-powered Bible and spiritual-guidance responses;</li>
+        <li>to verify subscriptions and prevent abuse of premium or reviewer access; and</li>
+        <li>to maintain the reliability and security of the app.</li>
     </ul>
 
-    <h2>AI-Powered Features</h2>
-    <p>SermonMate uses artificial intelligence (AI) to provide personalized Bible chat responses. When you use AI chat, your message is sent through our Supabase Edge Function to AI providers, which may include OpenAI and Google AI, to generate relevant scripture-based guidance. Chat display history is stored locally on your device.</p>
-    <p>Please do not submit sensitive personal, medical, financial, legal, or confidential information in AI chat prompts. AI responses may be imperfect and should not be treated as professional advice.</p>
+    <h2>Service providers</h2>
+    <p>Depending on the feature used, SermonMate uses Cloudflare (Worker and R2 delivery), RevenueCat (subscription management and entitlement verification), OpenAI and Google AI (AI responses), Supabase (legacy backend compatibility), Google Play, and Apple App Store (payment processing). These providers handle information under their respective policies.</p>
 
-    <h2>Subscriptions</h2>
-    <p>Subscriptions are processed entirely through Apple App Store or Google Play Store. We do not collect or store
-        your payment information directly. All payment data is handled securely by Apple or Google.</p>
-    <p>SermonMate currently offers weekly and annual subscription plans only. SermonMate does not currently offer a free trial, introductory offer, or monthly subscription plan.</p>
+    <h2>Your choices and deletion</h2>
+    <p>Because SermonMate does not require a user account, there is no account profile for us to delete. You can remove local app data through your device settings or by uninstalling the app. Uninstalling removes locally stored app data, including downloads, bookmarks, preferences, and chat display history. Subscription purchases, refunds, and billing records must be managed through Google Play or the Apple App Store. See our <a href="data-deletion.html">Data Deletion page</a> for details.</p>
 
-    <h2>Data Storage and Security</h2>
-    <ul>
-        <li>Bookmarks, preferences, reading progress, and chat display history are stored locally on your device</li>
-        <li>AI chat messages are transmitted only as needed to provide AI-powered responses</li>
-        <li>We do not maintain user accounts or login systems</li>
-        <li>Deleting the app removes all locally stored data</li>
-        <li>Subscription history and billing records are managed by Apple, Google, and RevenueCat</li>
-    </ul>
+    <h2>Children's privacy</h2>
+    <p>SermonMate is not directed to children under 13. We do not knowingly collect personal information from children. If you believe a child has provided personal information through the app, contact us using the details below.</p>
 
-    <h2>Third-Party Services</h2>
-    <p>We use the following third-party services:</p>
-    <ul>
-        <li><strong>RevenueCat:</strong> Subscription management and entitlement verification</li>
-        <li><strong>Supabase:</strong> Secure backend routing for AI chat requests</li>
-        <li><strong>OpenAI:</strong> May power the AI chat feature</li>
-        <li><strong>Google AI:</strong> May power the AI chat feature</li>
-        <li><strong>Apple/Google:</strong> Subscription payment processing</li>
-    </ul>
-
-    <h2>Your Rights</h2>
-    <ul>
-        <li><strong>Data Control:</strong> You control locally stored preferences, bookmarks, reading progress, and chat display history on your device</li>
-        <li><strong>Deletion:</strong> Uninstall the app to delete locally stored app data</li>
-        <li><strong>No Account:</strong> No SermonMate account creation is required to use the app</li>
-        <li><strong>Subscription Management:</strong> Cancel, renew, or request refunds through Apple App Store or Google Play Store</li>
-    </ul>
-
-    <h2>Children's Privacy</h2>
-    <p>SermonMate is not directed to children under 13. We do not knowingly collect personal information from children. If you believe a child has provided personal information through the app, please contact us.</p>
-
-    <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last
-        Updated" date.</p>
+    <h2>Changes to this policy</h2>
+    <p>We may update this policy from time to time. We will post the updated policy here and change the &quot;Last updated&quot; date.</p>
 
     <div class="contact">
-        <h2>Contact Us</h2>
-        <p>If you have questions about this Privacy Policy, please contact us at:</p>
-        <p><strong>Email:</strong> devmile45@gmail.com</p>
+        <h2>Contact us</h2>
+        <p>For privacy questions or deletion requests, email <a href="mailto:devmile45@gmail.com">devmile45@gmail.com</a>. Please do not include sensitive AI-chat content in your email.</p>
     </div>
 </body>
-
 </html>
